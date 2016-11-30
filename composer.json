@@ -1,4 +1,7 @@
 {
+	"name": "liuyang/framework-test",
+	"description": "liuyang php framework test",
+	"license": "MIT",
 	"require":{
 		"symfony/class-loader":"2.1.*",
 		"symfony/http-foundation":"2.1.*",
