@@ -2,7 +2,18 @@
 	"name": "liuyang/framework-test",
 	"description": "liuyang php framework test",
 	"license": "MIT",
-	"version": "1.0.0",
+	"version": "1.0.1",
+	"keywords":          [
+		"liuyang",
+		"php-framework"
+	],
+	"authors": [
+		{
+			"name":     "liuyang",
+			"email":    "ocramius@gmail.com",
+			"homepage": "http://ocramius.github.com/"
+		}
+	],
 	"require":{
 		"symfony/class-loader":"2.1.*",
 		"symfony/http-foundation":"2.1.*",
