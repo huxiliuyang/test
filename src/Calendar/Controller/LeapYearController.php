@@ -1,0 +1,37 @@
+<?php
+namespace Calendar\Controller;
+
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
+use Calendar\Model\LeapYear;
+
+class LeapYearController
+{
+    public function indexAction(Request $request, $year)
+    {
+        $leapyear = new LeapYear();
+        if ($leapyear->isLeapYear($year)) {
+            $response = new Response('Yep, this is a leap year!'.rand());
+        } else {
+            $response = new Response('Nope, this is not a leap year.'.rand());
+        }
+
+        $response->setTtl(10);
+
+        return $response;
+    }
+
+    public function stringAction(Request $request, $year)
+    {
+        $leapyear = new LeapYear();
+        if ($leapyear->isLeapYear($year)) {
+            $response = 'string: Yep, this is a leap year!'.rand();
+        } else {
+            $response = 'string: Nope, this is not a leap year.'.rand();
+        }
+
+        //$response->setTtl(10);
+
+        return $response;
+    }
+}
